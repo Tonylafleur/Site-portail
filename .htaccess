@@ -1,0 +1,50 @@
+# ===============================
+# ACTIVATION REWRITE
+# ===============================
+RewriteEngine On
+
+# ===============================
+# PAGE 404
+# ===============================
+ErrorDocument 404 /Teferet-Acarad/404.php
+
+# ===============================
+# LANGUES : /fr /en /ru
+# ===============================
+
+# /fr ou /en ou /ru
+RewriteRule ^(fr|en|ru)/?$ index.php?lang=$1 [L,QSA]
+
+# /fr/quelque-chose
+RewriteRule ^(fr|en|ru)/(.*)$ $2?lang=$1 [L,QSA]
+
+# ===============================
+# FICHIERS / DOSSIERS EXISTANTS
+# ===============================
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# ===============================
+# ROUTAGE PRINCIPAL
+# ===============================
+RewriteRule ^ index.php [L]
+
+# ===============================
+# COMPRESSION
+# ===============================
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css application/javascript application/json
+</IfModule>
+
+# ===============================
+# CACHE NAVIGATEUR
+# ===============================
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+  ExpiresByType image/webp "access plus 6 months"
+  ExpiresByType image/jpeg "access plus 6 months"
+  ExpiresByType image/png "access plus 6 months"
+</IfModule>

@@ -1,0 +1,54 @@
+{
+  "navbar": {
+    "home": "Home",
+    "about": "About Us",
+    "languages": {
+      "fr": "French",
+      "en": "English",
+      "ru": "Russian"
+    }
+  },
+  "sidebar": {
+    "facebook_tooltip": "Follow us on Facebook",
+    "whatsapp_tooltip": "Contact us on WhatsApp",
+    "instagram_tooltip": "Follow us on Instagram",
+    "tiktok_tooltip": "Follow us on TikTok"
+  },
+  "hero": {
+    "title": "African Art, Culture and Cosmetics",
+    "descriptions": [
+      "Art and culture are essential to understanding the world and our place in it.",
+      "They connect us to our roots, identity, and history.",
+      "African cosmetics, rooted in ancestral traditions, celebrate the natural beauty and diversity of the continent.",
+      "Together, they form a bridge between the past and the future, enriching the human experience."
+    ]
+  },
+  "about": {
+    "title": "About Us",
+    "teferet": {
+      "title": "TEFERET LTD",
+      "description": "Promotion of medicinal and edible plants, spices, and barks in ethnic cosmetics. Enhancement of African endogenous and ancestral heritage."
+    },
+    "acarad": {
+      "title": "ACARAD",
+      "description": "Association for the promotion of African knowledge, cultures, and the reconnection of Afro-descendants."
+    },
+    "visit_website": "Visit website"
+  },
+  "footer": {
+    "navigation": "Navigation",
+    "home": "Home",
+    "about_us": "About Us",
+    "contact": "Contact",
+    "visitors": "Visitors",
+    "social_media": "Social Networks",
+    "address": "Bonassama, Douala - Cameroon",
+    "phone": "+237 672 651 959",
+    "email": "tonyetony11@gmail.com",
+    "copyright": "© 2025 Teferet Ltd & ACARAD. All rights reserved."
+  },
+  "visitors": {
+    "total": "Total",
+    "today": "Today"
+  }
+}

@@ -1,0 +1,43 @@
+- Je veux que tu développes un menu fixe avec le logo à gauche, les éléments du menu:
+  -Accueil, 
+  -Acarad (sous-menu: Qui sommes-nous?, L'équipe), 
+  -Objectifs stratégiques(sous-menus: Objectifs, Missions, Cibles), 
+  -Évènements(sous-menus: Activités, Perspectives), 
+  -Partenariat(sous-menus: Dons, Nous soutenir), 
+  -Contact qui dirige vers son ancre dans le footer
+  -sélecteur de langue en Fr, En et Ru) sont à droite.
+Le header a un fond blanc légèrement transparent avec la couleur des textes en noir.
+
+=========Accueil(home.php)==================================
+- Une image de fond pour tout le site floutté légèrement (teteart2.jpg)
+- Une section avec image en background légèrement assombri avec comme titre ACARAD et sous celui-ci sa définition
+- Une seconde section qui a pour titre "Nos diversités" avec des cartes ayant des images de fond et qui parlent de:
+   - Art,Musique,Mode,Danses traditionnelles
+- Une troisième section qui présente une vidéo de acarad
+- Une quatrième section qui présente la géolocalisation de l'association avec une carte googlemap
+- Un footer qui intègre les liens vers le menu avec des icônes bootstrap, une adresse mail statique,une lien de téléphone(qui affiche le numéro de téléphone au clic,
+les mentions légales, les liens vers les réseaux sociaux, un copyright 2025 Acarad. Tous droits réservés.
+- Le footer a la couleur noire cassée
+
+associationacarad/
+├── css/
+│   ├── bootstrap.min.css  # Bootstrap CSS
+│   └── style.css          # Styles personnalisés
+├── js/
+│   ├── bootstrap.bundle.min.js  # Bootstrap JS
+│   └── scripts.js               # Scripts personnalisés
+├── includes/
+│   ├── header.php       # En-tête avec navbar
+│   ├── footer.php       # Pied de page
+│   ├── config.php       # Configuration
+│   │── banner.php       # Bannière avec logo
+├── pages/
+│   ├── home.php         # Page d’accueil
+│   ├── acarad.php        # Page À propos
+│   ├── services.php     # Page Services
+│   ├── contact.php      # Page Contact
+├── assets/
+│   ├── images/          # Logo, images
+│   └── fonts/           # Polices (optionnel)
+├── .htaccess            # URL propres
+├── index.php            # Point d’entrée
