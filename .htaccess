@@ -1,7 +1,11 @@
-# ===============================
-# ACTIVATION REWRITE
-# ===============================
 RewriteEngine On
+
+# ===============================
+# FICHIERS / DOSSIERS EXISTANTS
+# ===============================
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
 
 # ===============================
 # PAGE 404
@@ -12,18 +16,11 @@ ErrorDocument 404 /Teferet-Acarad/404.php
 # LANGUES : /fr /en /ru
 # ===============================
 
-# /fr ou /en ou /ru
+# /fr /en /ru
 RewriteRule ^(fr|en|ru)/?$ index.php?lang=$1 [L,QSA]
 
-# /fr/quelque-chose
-RewriteRule ^(fr|en|ru)/(.*)$ $2?lang=$1 [L,QSA]
-
-# ===============================
-# FICHIERS / DOSSIERS EXISTANTS
-# ===============================
-RewriteCond %{REQUEST_FILENAME} -f [OR]
-RewriteCond %{REQUEST_FILENAME} -d
-RewriteRule ^ - [L]
+# /fr/page
+RewriteRule ^(fr|en|ru)/(.*)$ index.php?lang=$1&path=$2 [L,QSA]
 
 # ===============================
 # ROUTAGE PRINCIPAL
@@ -48,3 +45,15 @@ RewriteRule ^ index.php [L]
   ExpiresByType image/jpeg "access plus 6 months"
   ExpiresByType image/png "access plus 6 months"
 </IfModule>
+
+# ===============================
+# SÉCURITÉ MINIMALE
+# ===============================
+Options -Indexes
+
+<FilesMatch "\.(env|ini|log|sql)$">
+  Order allow,deny
+  Deny from all
+</FilesMatch>
+
+RedirectMatch 404 /\.git

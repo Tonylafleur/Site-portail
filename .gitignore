@@ -1,0 +1,26 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Apache / XAMPP
+*.pid
+*.sock
+
+# Logs
+*.log
+logs/
+
+# Env secrets
+.env
+.env.local
+
+# Uploads temporaires (si tu en as)
+uploads/tmp/
+
+# Cache
+cache/
+tmp/
